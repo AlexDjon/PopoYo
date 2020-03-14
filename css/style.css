@@ -20,8 +20,8 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  background-color: var(--red-dark);
-  border-bottom: solid 5px var(--black-off);
+  background-color: var(--black-off);
+  border-bottom: solid 5px var(--black-on);
 }
 .cabecalho .logo {
   width: 110px;
@@ -31,7 +31,7 @@
   border: solid 3px var(--black-off);
 }
 .cabecalho .menu {
-  margin-bottom: 25px;
+  margin-bottom: 0;
   display: inline-flex;
   align-items: center;
 }
@@ -55,8 +55,41 @@
   }
   .cabecalho .menu li a {
     font-size: 13px;
+  } 
+}
+
+/* -- List -- */
+.list {
+  margin: 35px 0;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.list article {
+  height: 340px;
+  width: 16%;
+  background-color: var(--pink);
+  border-radius: 8px;
+  background-image: url('../img/default.png');
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow);
+  border: solid 5px var(--black-off);
+  opacity: 0.5;
+}
+.list article:nth-child(2) { height: 365px; width: 58%; opacity: 1; }
+@media (max-width: 760px) {
+  .list {
+    width: 100%;
+    margin-top: 20px;
   }
-  
+  .list article {
+    width: 12%;
+    height: 160px;
+  }
+  .list article:nth-child(2) { width: 60%; height: 180px; }
 }
 
 /* MAIN */
@@ -73,7 +106,8 @@ main h3 {
   text-transform: uppercase;
   line-height: 65px;
   margin: 45px 30% 8px 30%;  
-  border-bottom: double 4px var(--pink-dark);
+  border-bottom: solid 4px var(--pink-dark);
+  border-radius: 0 0 10px 10px;
   font-family: 'Souce Code Pro', sans-serif;
 }
 main h3 b {
@@ -92,64 +126,10 @@ main h3 b {
   }
 }
 
-/* -- ARTES -- */
-.artes {
-  width: 85%;
-  margin: 30px 7.5%;
-  margin-top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.artes .list {
-  margin-top: 50px;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-.artes .list article {
-  height: 340px;
-  width: 20%;
-  background-color: var(--pink);
-  border-radius: 8px;
-  background-image: url('../img/default.png');
-  background-size: cover;
-  background-position: center;
-  box-shadow: var(--shadow);
-  border: solid 5px var(--black-off);
-  opacity: 0.2;
-}
-.artes .list article:nth-child(2) { height: 365px; width: 50%; opacity: 1; }
-.artes h3 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-@media (max-width: 760px) {
-  .artes {
-    width: 100%;
-    margin: 10px 0 0 0;
-  }
-  .artes h3 {
-    order: 1;
-  }
-  .artes .list {
-    order: 2;
-    margin-top: 20px;
-  }
-  .artes .list article {
-    width: 12%;
-    height: 160px;
-  }
-  .artes .list article:nth-child(2) { width: 66%; height: 180px; }
-}
-
 /* -- CATEGORIAS -- */
 .categorias {
   width: 80%;
-  margin: 35px 10%;
+  margin: 20px 10%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -212,7 +192,7 @@ main h3 b {
 /* -- TRABALHOS -- */
 .trabalhos {
   width: 80%;
-  padding: 25px 10% 20px 10%;
+  padding: 15px 10% 20px 10%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -229,7 +209,7 @@ main h3 b {
   box-shadow: var(--shadow);
   margin-top: 65px;
 }
-.trabalhos .art:nth-child(2) { margin-top: 25px; }
+.trabalhos .art:nth-child(3) { margin-top: 25px; }
 .trabalhos .art .image {
   width: 100%;
   height: 200px;
@@ -314,8 +294,8 @@ main h3 b {
 }
 .autor h4 {
   color: var(--white);
-  line-height: 70px;
-  font-size: 14px;
+  line-height: 60px;
+  font-size: 13.6px;
 }
 .autor h4 a {
   color: var(--yellow)

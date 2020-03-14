@@ -1,0 +1,37 @@
+/*- RESET -*/
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./fonts/OpenSans-Regular.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  font-weight: normal;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--black)
+}
+::-webkit-scrollbar {width: 8px; background-color: var(--black);}
+::-webkit-scrollbar-thumb {background-color: var(--red-dark);}
+html {
+   scroll-behavior: smooth;
+}
+body {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+}
+
+a {
+  color: var(--yellow);
+  opacity: 0.9;
+}
+a:hover {
+  opacity: 1;
+}

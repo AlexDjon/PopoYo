@@ -11,3 +11,16 @@ window.onscroll = function() {
 gotop.onclick = () => {
   window.scroll(0,0)
 }
+
+const arts = document.querySelectorAll('.list article')
+arts.forEach((v, i) => {
+  v.onclick = () => {
+    if(i != 1) {
+      const mid = arts[1].style.backgroundImage
+      const selected = arts[i].style.backgroundImage
+      
+      arts[1].style.backgroundImage = selected
+      arts[i].style.backgroundImage = mid
+    }
+  }
+})

@@ -1,12 +1,15 @@
 /* STYLE BODY */
 :root {
   --pink: #EBBAB9;
-  --pink-dark: #F45B69;
+  --pink-dark: #f45d69;
   --red: #F13030;
   --red-dark: #5A0001;
   --yellow: #FF9800;
   --white: #F7F7F7;
   --black: #22181C;
+  --black-off: rgba(0,0,0,0.3);
+  --black-on: rgba(14, 14, 14, 0.3);
+  --blue: #A8E7F7;
   
   --shadow: 0 0 14px 0 rgba(0, 0, 0, 0.205);
 }
@@ -17,13 +20,15 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  background-color: var(--black);
+  background-color: var(--red-dark);
+  border-bottom: solid 5px var(--black-off);
 }
 .cabecalho .logo {
-  width: 85px;
-  height: 85px;
+  width: 110px;
+  height: 110px;
   margin: 15px 0 25px 0;
   border-radius: 50%;
+  border: solid 3px var(--black-off);
 }
 .cabecalho .menu {
   margin-bottom: 25px;
@@ -38,17 +43,20 @@
   font-size: 14px;
   padding-bottom: 3px;
   text-transform: uppercase;
-  font-weight: bold;
 }
-.cabecalho .menu li a:hover { border-bottom: solid 2px var(--red-dark); }
+.cabecalho .menu li a:hover { border-bottom: solid 2px var(--pink-dark); }
 @media (max-width: 760px) {
   .cabecalho .logo {
-    width: 75px;
-    height: 75px;
+    width: 90px;
+    height: 90px;
+  }
+  .cabecalho .menu {
+    margin-bottom: 15px;
   }
   .cabecalho .menu li a {
     font-size: 13px;
   }
+  
 }
 
 /* MAIN */
@@ -60,14 +68,13 @@ main {
 }
 main section { text-align: center; }
 main h3 {
-  width: 90%;
-  color: var(--black);
-  font-size: 27px;
-  text-transform: lowercase;
-  line-height: 55px;
-  margin: 45px 0 8px 0;  
-  color: var(--black);
-  border-bottom: solid 1px var(--black);
+  width: 30%;
+  font-size: 19px;
+  text-transform: uppercase;
+  line-height: 65px;
+  margin: 45px 30% 8px 30%;  
+  border-bottom: double 4px var(--pink-dark);
+  font-family: 'Souce Code Pro', sans-serif;
 }
 main h3 b {
   border-bottom: solid 2px var(--red-dark);
@@ -76,21 +83,27 @@ main h3 b {
 /* main hr { width: 20%; margin: 0 40% 45px 40%; height: 2px; background-color: var(--red-dark); border-radius: 1px; } */
 @media (max-width: 760px) {
   main h3 {
-    font-size: 22px;
+    width: 70%;
+    margin: 20px 15% 8px 15%;
+    font-size: 15px;
+    line-height: 35px;
+    font-weight: bold;
+    opacity: 0.8;
   }
 }
 
 /* -- ARTES -- */
 .artes {
   width: 85%;
-  margin: 40px 7.5%;
-  margin-top: 90px;
+  margin: 30px 7.5%;
+  margin-top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 .artes .list {
+  margin-top: 50px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -98,51 +111,39 @@ main h3 b {
   align-items: center;
 }
 .artes .list article {
-  height: 310px;
-  width: 25%;
+  height: 340px;
+  width: 20%;
   background-color: var(--pink);
   border-radius: 8px;
   background-image: url('../img/default.png');
   background-size: cover;
   background-position: center;
   box-shadow: var(--shadow);
-  border-bottom: solid 10px var(--red-dark);
+  border: solid 5px var(--black-off);
+  opacity: 0.2;
 }
-.artes .list article:nth-child(3) { display: block; width: 30%; height: 340px; }
-.artes .list button {
-  background-color: var(--red);
-  opacity: 0.85;
-  color: var(--white);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: var(--shadow);
-}
-.artes .list button:active {  
-  width: 55px;
-  height: 55px;
-  opacity: 1;
-  transition: all 0.1s linear 0s;
+.artes .list article:nth-child(2) { height: 365px; width: 50%; opacity: 1; }
+.artes h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 @media (max-width: 760px) {
   .artes {
-    width: 95%;
-    margin: 50px 2.5% 0 2.5%;
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
+  .artes h3 {
+    order: 1;
+  }
+  .artes .list {
+    order: 2;
+    margin-top: 20px;
   }
   .artes .list article {
-    display: none;
+    width: 12%;
+    height: 160px;
   }
-  .artes .list article:nth-child(3) { display: block; width: 70%; height: 180px; }
-  .artes .list button {
-    width: 35px;
-    height: 35px;
-  }
-  .artes .list button:active {  
-    width: 40px;
-    height: 40px;
-  }
+  .artes .list article:nth-child(2) { width: 66%; height: 180px; }
 }
 
 /* -- CATEGORIAS -- */
@@ -155,40 +156,63 @@ main h3 b {
 }
 .categorias .tipo {
   flex-basis: 30%;
-  margin: 15px 0;
+  padding: 35px 0;
+  margin: 45px 0 0 0;
+  border-radius: 14px 0;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  background: var(--black-on);
+  box-shadow: var(--shadow);
+}
+.categorias .tipo:hover {
+  background: var(--black-off);
 }
 .categorias .tipo div {
-  width: 130px;
-  height: 130px;
-  margin-top: 25px;
+  width: 155px;
+  height: 155px;
   margin-bottom: 10px;
   background-image: url('../img/steve.jpg');
   background-size: 100% 100%;
   background-position: center;
   border-radius: 50%;
-  border: solid 3px var(--pink-dark);
+  border: double 3px var(--pink-dark);
 }
 .categorias h4 {
   font-weight: bold;
   font-size: 16px;
+  text-transform: uppercase;
+}
+.categorias p {
+  margin: 15px 50px 0 50px;
+  font-size: 15px;
+  color: var(--pink);
 }
 @media (max-width: 760px) {
   .categorias {
-    margin: 20px 10%;
+    width: 95%;
+    margin: 20px 2.5%;
+  }
+  .categorias h3 {
+    order: 1;
   }
   .categorias .tipo {
+    order: 2;
     flex-basis: 80%;
     margin: 10px 0;
+    padding-bottom: 25px;
+  }
+  .categorias p {
+    margin: 15px 18px 0 18px;
+    font-size: 15px;
+    color: var(--pink);
   }
 }
 
 /* -- TRABALHOS -- */
 .trabalhos {
   width: 80%;
-  padding: 0 10% 20px 10%;
+  padding: 25px 10% 20px 10%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -196,7 +220,7 @@ main h3 b {
 }
 .trabalhos .art {
   width: 30%;
-  background-color: var(--pink-dark);
+  background:  var(--black-off);
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -205,7 +229,7 @@ main h3 b {
   box-shadow: var(--shadow);
   margin-top: 65px;
 }
-.trabalhos .art:nth-child(3) { margin-top: 25px; }
+.trabalhos .art:nth-child(2) { margin-top: 25px; }
 .trabalhos .art .image {
   width: 100%;
   height: 200px;
@@ -223,13 +247,17 @@ main h3 b {
 }
 .trabalhos .art .desc {
   width: 90%;
-  font-size: 13px;
-  color: #f1f1f1;
-  padding-bottom: 15px;
+  font-size: 13.8px;
+  color: var(--pink);
+  padding: 0 25px 25px 25px;
 }
 @media (max-width: 760px) {
+  .trabalhos h3 {
+    order: 1;
+  }
   .trabalhos .art {
-    width: 90%;
+    order: 2;
+    width: 100%;
     margin-top: 25px;
   }
   .trabalhos .art:nth-child(3) { margin-top: 25px; }
@@ -242,7 +270,7 @@ main h3 b {
 /* -- BOTTOM -- */
 .infos {
   width: 100%;
-  margin-top: 80px;
+  margin-top: 42px;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -250,7 +278,7 @@ main h3 b {
 .contato {
   width: 90%;
   padding: 35px 5%;
-  background-color: var(--red-dark);
+  background-color: var(--black-off);
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -281,13 +309,16 @@ main h3 b {
 .contato ul li a span { color: var(--yellow); font-size: 30px; }
 .autor {
   width: 100%;
-  background-color: var(--black);
+  background-color: var(--red-dark);
   text-align: center;
 }
 .autor h4 {
   color: var(--white);
   line-height: 70px;
   font-size: 14px;
+}
+.autor h4 a {
+  color: var(--yellow)
 }
 @media (max-width: 760px) {
   .infos {
@@ -303,7 +334,7 @@ main h3 b {
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background-color: var(--black);
+  background-color: var(--pink-dark);
   bottom: 60px;
   right: 60px;
   z-index: 999;

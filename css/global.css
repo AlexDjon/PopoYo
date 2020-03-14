@@ -32,3 +32,30 @@ a {
 a:hover {
   opacity: 1;
 }
+
+/* -- GO TOP -- */
+.gotop {
+  display: none;
+  opacity: 0.9;
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: var(--pink-dark);
+  bottom: 60px;
+  right: 60px;
+  z-index: 999;
+  text-align: center;
+  cursor: pointer;
+}
+.gotop span {
+  font-size: 21px;
+  line-height: 45px;
+  color: var(--white);
+}
+@media (max-width: 760px) {
+  .gotop {
+     bottom: 35px;
+     right: 28px;
+  }
+}

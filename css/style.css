@@ -6,7 +6,8 @@
   --red-dark: #5A0001;
   --yellow: #FF9800;
   --white: #F7F7F7;
-  --black: #22181C;
+  --black: #263238;
+  --grey: #212121;
   --black-off: rgba(0,0,0,0.3);
   --black-on: rgba(14, 14, 14, 0.3);
   --blue: #A8E7F7;
@@ -21,7 +22,7 @@
   justify-content: center;
   align-items: center;
   background-color: var(--black-off);
-  border-bottom: solid 5px var(--black-on);
+  border-bottom: solid 5px var(--grey);
 }
 .cabecalho .logo {
   width: 110px;
@@ -60,7 +61,7 @@
 
 /* -- List -- */
 .list {
-  margin: 35px 0;
+  margin: 35px 0 60px 0;
   width: 80%;
   display: flex;
   flex-wrap: wrap;
@@ -110,11 +111,6 @@ main h3 {
   border-radius: 0 0 10px 10px;
   font-family: 'Souce Code Pro', sans-serif;
 }
-main h3 b {
-  border-bottom: solid 2px var(--red-dark);
-  text-transform: capitalize;
-}
-/* main hr { width: 20%; margin: 0 40% 45px 40%; height: 2px; background-color: var(--red-dark); border-radius: 1px; } */
 @media (max-width: 760px) {
   main h3 {
     width: 70%;
@@ -152,7 +148,6 @@ main h3 b {
   width: 155px;
   height: 155px;
   margin-bottom: 10px;
-  background-image: url('../img/steve.jpg');
   background-size: 100% 100%;
   background-position: center;
   border-radius: 50%;
@@ -173,11 +168,7 @@ main h3 b {
     width: 95%;
     margin: 20px 2.5%;
   }
-  .categorias h3 {
-    order: 1;
-  }
   .categorias .tipo {
-    order: 2;
     flex-basis: 80%;
     margin: 10px 0;
     padding-bottom: 25px;
@@ -289,7 +280,7 @@ main h3 b {
 .contato ul li a span { color: var(--yellow); font-size: 30px; }
 .autor {
   width: 100%;
-  background-color: var(--red-dark);
+  background-color: var(--grey);
   text-align: center;
 }
 .autor h4 {
@@ -303,32 +294,5 @@ main h3 b {
 @media (max-width: 760px) {
   .infos {
     margin-top: 40px;
-  }
-}
-
-/* -- GO TOP -- */
-.gotop {
-  display: none;
-  opacity: 0.9;
-  position: fixed;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background-color: var(--pink-dark);
-  bottom: 60px;
-  right: 60px;
-  z-index: 999;
-  text-align: center;
-  cursor: pointer;
-}
-.gotop span {
-  font-size: 21px;
-  line-height: 45px;
-  color: var(--white);
-}
-@media (max-width: 760px) {
-  .gotop {
-     bottom: 35px;
-     right: 28px;
   }
 }

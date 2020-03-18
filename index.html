@@ -21,7 +21,7 @@
     <ul class='menu'>
       <li><a href='#categorias'> Categorias </a></li>
       <li><a href='#trabalhos'> Trabalhos </a></li>
-      <li><a href='#infos'> Contatos </a></li>
+      <li><a href='#footer'> Contatos </a></li>
     </ul>
     <div class='list'>
       <article style='background-image: url("img/b_1.jpg");'></article>
@@ -38,19 +38,28 @@
         <div style='background-image: url("img/c_caricatura.jpg");' class='wallpaper'></div>
         <h4> Caricatura </h4>
         <p> Em informática, avatar é um cibercorpo inteiramente digital, uma figura gráfica de complexidade variada </p>        
-        <button onclick="orcamento.openCard('caricatura')"> Ver Mais </button>
+        <button onclick="orcamento.openCard('caricatura')">
+          <span class='mdi mdi-more'></span>
+          Ver Mais
+        </button>
       </article>
       <article class='tipo'>
         <div style='background-image: url("img/c_avatar.jpg");' class='wallpaper'></div>
         <h4> Avatar </h4>
         <p> Em informática, avatar é um cibercorpo inteiramente digital, uma figura gráfica de complexidade variada </p>        
-        <button onclick="orcamento.openCard('avatar')"> Ver Mais </button>
+        <button onclick="orcamento.openCard('avatar')">
+          <span class='mdi mdi-more'></span>
+          Ver Mais
+        </button>
       </article>
       <article class='tipo'>
         <div style='background-image: url("img/c_ilustração.jpg");' class='wallpaper'></div>
         <h4> Ilustração </h4>
         <p> Ilustração digital é qualquer tipo de ilustração feita digitalmente, no computador, através de softwares. </p>
-        <button onclick="orcamento.openCard('ilustração')"> Ver Mais </button>
+        <button onclick="orcamento.openCard('ilustração')">
+          <span class='mdi mdi-more'></span>
+          Ver Mais
+        </button>
       </article>
       <!-- <article class='tipo buy'>
         <div style='background-image: url("img/c_ilustração.jpg");'></div>
@@ -87,7 +96,7 @@
   </main>
 
   <!-- Informações -->
-  <bottom class='footer'>
+  <bottom class='footer' id='footer'>
     <div class='contato'>
       <img src='img/logo.png' alt=''>
       <h3>Amanda Cristine</h3>
@@ -142,7 +151,7 @@
           </div>
           <div class='dados'>    
             <label for='quant'>Quantidade</label>
-            <input type="number" min='1' max='5' value="1" id='quant' onkeyup="orcamento.enforce()">
+            <input type="number" min='1' max='5' value="1" id='nums' onkeyup="orcamento.enforce()">
             <b id='total'>R$ 25,00</b>
             <button><span class='mdi mdi-cart' title='Comprar'></span>Comprar</button>
           </div>

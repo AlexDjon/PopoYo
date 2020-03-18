@@ -85,6 +85,7 @@
   .list {
     width: 100%;
     margin-top: 20px;
+    margin-bottom: 30px;
   }
   .list article {
     width: 12%;
@@ -171,6 +172,13 @@ main h3 {
   font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
+  opacity: 0.9;
+  line-height: 20px;
+}
+.categorias .tipo button span {
+  font-size: 14px;
+  margin-right: 3px;
+  line-height: 20px;
 }
 @media (max-width: 760px) {
   .categorias {

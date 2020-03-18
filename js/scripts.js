@@ -28,11 +28,11 @@ arts.forEach((v, i) => {
 // Orçamento
 function Orcamento() {
   this.categoria = ''
-  this.quant = 1
+  this.quantidadeidade = 1
+  this.valor = 25
   const orcamento = document.querySelector('.orcamento')
-  const quantidade = document.querySelector('.dados #quant')
+  const nums = document.querySelector('.dados #nums')
   const total = document.querySelector('.dados #total')
-  const valor = 25
   const mp = {
     caricatura: [
       'a248d185-2eae-44b8-a002-5725ea595dd1',
@@ -76,30 +76,28 @@ function Orcamento() {
     orcamento.style.display = 'flex'    
   }
   this.enforce = () => {
-    const el = quantidade
-    if(el.value != ""){
-      if(parseInt(el.value) < parseInt(el.min)){
-        el.value = el.min;
-        this.quant = el.min
+    if(nums.value != ""){
+      if(parseInt(nums.value) < parseInt(nums.min)){
+        nums.value = nums.min;
+        this.quantidade = nums.min
       }
-      else if(parseInt(el.value) > parseInt(el.max)){
-        el.value = el.max;
-        this.quant = el.max
+      else if(parseInt(nums.value) > parseInt(nums.max)){
+        nums.value = nums.max;
+        this.quantidade = nums.max
       }
       else {
-        this.quant = el.value
-      }      
-      total.innerHTML = `R$ ${this.quant * valor},00`
+        this.quantidade = nums.value
+      } 
     } else {
-      this.quant = 1
-      total.innerHTML = `R$ ${this.quant * valor},00`
+      this.quantidade = 1
     }
+    total.innerHTML = `R$ ${this.quantidade * this.valor},00`
   }
 
   const submit = document.querySelector('.dados button')
   submit.onclick = () => {
     let link = `https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=289691572-`
-        link += mp[this.categoria][quantidade.value-1]
+        link += mp[this.categoria][nums.value-1]
     window.open(link)
   }
   

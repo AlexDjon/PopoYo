@@ -5,28 +5,28 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <meta name='author' content='Alex Djonata'>
   <meta name='description' content=''>
-  <meta name='keywords' content=''>
+  <meta name='keywords' content='popoyo, amanda cristine, desenhos, artes, ilustrações, avatares, trabalhos, paladins, lol'>
   <meta name='robots' content='index, fixed'>
   <meta name='theme-color' content='#212121'>
   <title>PopoYo - Artes e Trabalhos</title>
 
-  <link rel='stylesheet' href='//cdn.materialdesignicons.com/5.0.45/css/materialdesignicons.min.css'>
-  <link rel='shortcut icon' href='img/icon.png'>
+  <link rel='stylesheet' href='https://cdn.materialdesignicons.com/5.0.45/css/materialdesignicons.min.css'>
+  <link rel='shortcut icon' href='img/icon.jpg'>
   <link rel='stylesheet' href='css/global.css'>
   <link rel='stylesheet' href='css/style.css'>
 </head>
 <body>
   <header class='cabecalho'>
-    <img src='img/logo.png' class='logo' alt='PopoYo Logo' title='PopoYo WebSite'>
+    <img src='img/icon.jpg' class='logo' alt='PopoYo Logo' title='PopoYo WebSite'>
     <ul class='menu'>
       <li><a href='#categorias'> Categorias </a></li>
       <li><a href='#trabalhos'> Trabalhos </a></li>
       <li><a href='#infos'> Contatos </a></li>
     </ul>
     <div class='list'>
-      <article style='background-image: url("img/skin-moji.jpg");'></article>
-      <article style='background-image: url("img/lobo.jpg");' id='mid'></article>
-      <article style='background-image: url("img/evie.jpg");'></article>
+      <article style='background-image: url("img/b_1.jpg");'></article>
+      <article style='background-image: url("img/b_2.jpg");' id='mid'></article>
+      <article style='background-image: url("img/b_3.jpg");'></article>
     </div>
   </header>
 
@@ -35,20 +35,28 @@
     <section class='categorias' id='categorias'>
       <h3> Categorias </h3>
       <article class='tipo'>
-        <div style='background-image: url("img/steve.jpg");'></div>
+        <div style='background-image: url("img/c_caricatura.jpg");' class='wallpaper'></div>
         <h4> Caricatura </h4>
-        <p> É um desenho de um personagem da vida real </p>
+        <p> Em informática, avatar é um cibercorpo inteiramente digital, uma figura gráfica de complexidade variada </p>        
+        <button onclick="orcamento.openCard('caricatura')"> Ver Mais </button>
       </article>
       <article class='tipo'>
-        <div style='background-image: url("img/boney.png");'></div>
+        <div style='background-image: url("img/c_avatar.jpg");' class='wallpaper'></div>
         <h4> Avatar </h4>
-        <p> Em informática, avatar é um cibercorpo inteiramente digital, uma figura gráfica de complexidade variada </p>
+        <p> Em informática, avatar é um cibercorpo inteiramente digital, uma figura gráfica de complexidade variada </p>        
+        <button onclick="orcamento.openCard('avatar')"> Ver Mais </button>
       </article>
       <article class='tipo'>
-        <div style='background-image: url("img/willo.jpg");'></div>
+        <div style='background-image: url("img/c_ilustração.jpg");' class='wallpaper'></div>
         <h4> Ilustração </h4>
         <p> Ilustração digital é qualquer tipo de ilustração feita digitalmente, no computador, através de softwares. </p>
+        <button onclick="orcamento.openCard('ilustração')"> Ver Mais </button>
       </article>
+      <!-- <article class='tipo buy'>
+        <div style='background-image: url("img/c_ilustração.jpg");'></div>
+        <h4> Como adiquirir um desenho? </h4>
+        <p> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy </p>
+      </article> -->
     </section>
 
     <!-- Trabalhos -->
@@ -79,7 +87,7 @@
   </main>
 
   <!-- Informações -->
-  <bottom class='infos' id='infos'>
+  <bottom class='footer'>
     <div class='contato'>
       <img src='img/logo.png' alt=''>
       <h3>Amanda Cristine</h3>
@@ -117,6 +125,31 @@
   <!-- Go to top -->
   <aside class="gotop">
     <span class='mdi mdi-arrow-up'></span>
+  </aside>
+
+  <!-- Orçamento -->
+  <aside class="orcamento">
+    <div class='card'>
+      <div class='titulo'>
+        <h4>Orçamento</h4>
+        <span class='mdi mdi-close' title='Fechar' id='card_close'></span>
+      </div>
+      <div class='detalhes'>
+          <hr>
+          <div class='infos'>
+            <img src='img/c_avatar.jpg'>        
+            <h4>Caricatura</h4>
+          </div>
+          <div class='dados'>    
+            <label for='quant'>Quantidade</label>
+            <input type="number" min='1' max='5' value="1" id='quant'>
+            <b id='total'>R$ 25,00</b>
+            <button><span class='mdi mdi-cart' title='Comprar'></span>Comprar</button>
+          </div>
+          <hr>
+          <p>Ao ser confirmado o pagamento, enviarei um email para decidir os detalhes!<br> Fique atento ao email da sua conta no mercado pago!</p>
+      </div>
+    </div>
   </aside>
   
   <script src='/js/scripts.js'></script>

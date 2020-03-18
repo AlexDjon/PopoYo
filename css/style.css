@@ -125,7 +125,7 @@ main h3 {
 /* -- CATEGORIAS -- */
 .categorias {
   width: 80%;
-  margin: 20px 10%;
+  margin: 0 10% 20px 10%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -144,7 +144,7 @@ main h3 {
 .categorias .tipo:hover {
   background: var(--black-off);
 }
-.categorias .tipo div {
+.categorias .tipo .wallpaper {
   width: 155px;
   height: 155px;
   margin-bottom: 10px;
@@ -153,15 +153,24 @@ main h3 {
   border-radius: 50%;
   border: double 3px var(--pink-dark);
 }
-.categorias h4 {
+.categorias .tipo h4 {
   font-weight: bold;
   font-size: 16px;
   text-transform: uppercase;
 }
-.categorias p {
-  margin: 15px 50px 0 50px;
+.categorias .tipo p {
+  margin: 15px 50px 20px 50px;
   font-size: 15px;
   color: var(--pink);
+}
+.categorias .tipo button {
+  padding: 7px 9px;
+  border-radius: 4px;
+  color: var(--white);
+  background: var(--pink-dark);
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 @media (max-width: 760px) {
   .categorias {
@@ -239,7 +248,7 @@ main h3 {
 }
 
 /* -- BOTTOM -- */
-.infos {
+.footer {
   width: 100%;
   margin-top: 42px;
   display: flex;
@@ -292,7 +301,138 @@ main h3 {
   color: var(--yellow)
 }
 @media (max-width: 760px) {
-  .infos {
+  .footer {
     margin-top: 40px;
+  }
+}
+
+.orcamento {
+  position: fixed;
+  background: var(--black-off);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 350px;
+  padding: 18px;
+  border-radius: 10px;
+  background: var(--black);
+}
+.card .titulo {
+  width: 100%;
+  margin: 0 0 20px 0;
+  display: flex;
+  justify-content: space-between;
+  line-height: 23px;
+}
+.card .titulo h4 {
+  text-transform: uppercase;
+  padding-left: 10px;
+  border-left: solid 3px var(--pink-dark);
+  font-size: 15px;
+}
+.card .titulo span {
+  font-size: 20px;
+  color: var(--pink-dark);
+  opacity: 0.9;
+  cursor: pointer;
+}
+.card .titulo span:hover { opacity: 1; }
+
+@media (max-width: 760px) {
+  .card {
+    width: 85%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+
+.detalhes {
+  height: 300px;
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+.detalhes hr {
+  width: 100%;
+  height: 2px;
+  background-color: var(--black-on);
+  opacity: 0.74;
+  border-radius: 50%;
+}
+.detalhes .infos {
+  width: 60%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.detalhes .infos img {
+  width: 50%;
+  border-radius: 50%;
+  border: solid 2px var(--pink);
+}
+.detalhes .infos h4 {
+  text-transform: uppercase;
+  margin: 8px 0;
+  font-size: 13px;
+  padding: 4px 8px;
+  border-radius: 5px;
+  background-color: var(--black-off);
+} 
+.detalhes .dados {
+  width: 40%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+.detalhes .dados label {
+  font-size: 12.5px;
+  margin: 20px 0 6px 0;
+  opacity: 0.8;
+}
+.detalhes .dados input {
+  width: 50px;
+  padding: 4px 8px 4px 11px;
+  margin-bottom: 10px;
+  background: none;
+  border: solid 1px var(--black-off);
+  border-radius: 5px;
+}
+.detalhes .dados b {
+  font-size: 13px;
+  margin-bottom: 13px;
+  padding: 3px 7px;
+  border-radius: 4px;
+  background-color: var(--black-off);
+}
+.detalhes .dados button {
+  padding: 5px 9px;
+  background-color: var(--pink-dark);
+  color: var(--white);
+  border-radius: 6px;
+  font-size: 11px;
+  opacity: 0.9;
+  cursor: pointer;
+}
+.detalhes .dados button:hover { opacity: 1; }
+.detalhes .dados button span { margin-right: 2px; }
+.detalhes p {
+  font-size: 13.5px;
+  color: var(--pink);
+  text-align: center;
+  padding: 0 20px;
+}
+@media (max-width: 760px) {
+  .detalhes p {
+    font-size: 12.8px;
+    padding: 0 10px;
   }
 }

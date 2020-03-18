@@ -159,7 +159,7 @@ main h3 {
   text-transform: uppercase;
 }
 .categorias .tipo p {
-  margin: 15px 50px 20px 50px;
+  margin: 15px 28px 20px 28px;
   font-size: 15px;
   color: var(--pink);
 }
@@ -174,8 +174,8 @@ main h3 {
 }
 @media (max-width: 760px) {
   .categorias {
-    width: 95%;
-    margin: 20px 2.5%;
+    width: 100%;
+    margin: 20px 0;
   }
   .categorias .tipo {
     flex-basis: 80%;
@@ -183,9 +183,8 @@ main h3 {
     padding-bottom: 25px;
   }
   .categorias p {
-    margin: 15px 18px 0 18px;
-    font-size: 15px;
-    color: var(--pink);
+    margin: 15px 0 0 0;
+    font-size: 14px;
   }
 }
 

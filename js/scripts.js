@@ -29,6 +29,8 @@ arts.forEach((v, i) => {
 function Orcamento() {
   this.categoria = ''
   const orcamento = document.querySelector('.orcamento')
+  const quantidade = document.querySelector('.dados #quant')
+  const total = document.querySelector('.dados #total')
   const valor = 25
   const mp = {
     caricatura: [
@@ -72,9 +74,19 @@ function Orcamento() {
 
     orcamento.style.display = 'flex'    
   }
-  
-  const quantidade = document.querySelector('.dados #quant')
-  const total = document.querySelector('.dados #total')
+  this.enforce = () => {
+    const el = quantidade
+    if(el.value != ""){
+      if(parseInt(el.value) < parseInt(el.min)){
+        el.value = el.min;
+      }
+      if(parseInt(el.value) > parseInt(el.max)){
+        el.value = el.max;
+      }
+    } else {
+      el.value = '1'
+    }
+  }
   quantidade.onchange = () => {
     total.innerHTML = `R$ ${quantidade.value * valor},00`
   }
@@ -85,6 +97,7 @@ function Orcamento() {
         link += mp[this.categoria][quantidade.value-1]
     window.open(link)
   }
+  
 }
 
 const orcamento = new Orcamento()

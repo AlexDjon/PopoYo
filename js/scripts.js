@@ -28,6 +28,7 @@ arts.forEach((v, i) => {
 // Orçamento
 function Orcamento() {
   this.categoria = ''
+  this.quant = 1
   const orcamento = document.querySelector('.orcamento')
   const quantidade = document.querySelector('.dados #quant')
   const total = document.querySelector('.dados #total')
@@ -79,16 +80,20 @@ function Orcamento() {
     if(el.value != ""){
       if(parseInt(el.value) < parseInt(el.min)){
         el.value = el.min;
+        this.quant = el.min
       }
-      if(parseInt(el.value) > parseInt(el.max)){
+      else if(parseInt(el.value) > parseInt(el.max)){
         el.value = el.max;
+        this.quant = el.max
       }
+      else {
+        this.quant = el.value
+      }      
+      total.innerHTML = `R$ ${this.quant * valor},00`
     } else {
-      el.value = '1'
+      this.quant = 1
+      total.innerHTML = `R$ ${this.quant * valor},00`
     }
-  }
-  quantidade.onchange = () => {
-    total.innerHTML = `R$ ${quantidade.value * valor},00`
   }
 
   const submit = document.querySelector('.dados button')

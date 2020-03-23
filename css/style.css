@@ -13,10 +13,16 @@
   --black-off: rgba(0,0,0,0.3);
   --black-on: rgba(14, 14, 14, 0.3);
   --black-low: rgba(14, 14, 14, 0.534);
-  --blue: #A8E7F7;
-  
-  --shadow: 0 0 14px 0 rgba(0, 0, 0, 0.205);
 }
+
+.bg-pink { background-color: var(--pink); }
+.bg-pink-dark { background-color: var(--pink-dark); }
+.bg-black { background-color: var(--black); }
+.bg-black-off { background-color: var(--black-off); }
+.bg-black-on { background-color: var(--black-on); }
+.bg-black-low { background-color: var(--black-low); }
+.bg-grey { background-color: var(--grey); }
+.shadow { box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.205); }
 
 .cabecalho {
   width: 100%;
@@ -25,7 +31,6 @@
   justify-content: center;
   align-items: center;
   border-radius: 0 0 9em 9em;
-  box-shadow: var(--shadow);
   background: linear-gradient(to bottom, var(--purple), var(--black-off));
 }
 .cabecalho .logo {
@@ -33,8 +38,6 @@
   height: 110px;
   margin: 0 0 35px 0;
   border-radius: 0 0 50% 50%;
-  box-shadow: var(--shadow);  
-  /* border: solid 3px var(--black-off); */
 }
 .cabecalho .menu {
   margin-bottom: 0;
@@ -89,12 +92,10 @@
 .list article {
   height: 340px;
   width: 14%;
-  background-color: var(--pink);
   border-radius: 15px;
   background-image: url('../img/default.png');
   background-size: cover;
   background-position: center;
-  box-shadow: var(--shadow);
   cursor: pointer;
 }
 .list article:hover {
@@ -193,7 +194,6 @@ main h3 {
   flex-flow: column wrap;
   align-items: center;
   background: var(--black-off);
-  box-shadow: var(--shadow);
 }
 .categorias .tipo .wallpaper {
   width: 155px;
@@ -217,8 +217,6 @@ main h3 {
 .categorias .tipo button {
   padding: 7px 9px;
   border-radius: 4px;
-  color: var(--white);
-  background: var(--pink-dark);
   font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
@@ -263,7 +261,6 @@ main h3 {
   justify-content: space-around;
   align-items: center;
   border-radius: 8px;
-  box-shadow: var(--shadow);
   margin-top: 65px;
 }
 .trabalhos .art:nth-child(3) { margin-top: 25px; }
@@ -311,11 +308,11 @@ main h3 {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
+  background-color: var(--black-off);
 }
 .contato {
   width: 90%;
-  padding: 35px 5%;
-  background-color: var(--black-off);
+  padding: 35px 5% 25px 5%;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -346,12 +343,12 @@ main h3 {
 .contato ul li a span { color: var(--yellow); font-size: 30px; }
 .autor {
   width: 100%;
-  background-color: var(--purple-dark);
+  /* background-color: var(--red-dark); */
   text-align: center;
 }
 .autor h4 {
   color: var(--white);
-  line-height: 60px;
+  line-height: 75px;
   font-size: 13.6px;
 }
 .autor h4 a {

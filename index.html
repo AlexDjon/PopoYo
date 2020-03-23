@@ -17,16 +17,24 @@
 </head>
 <body>
   <header class='cabecalho'>
-    <img src='img/icon.jpg' class='logo' alt='PopoYo Logo' title='PopoYo WebSite'>
+    <img src='img/icon.png' class='logo' alt='PopoYo Logo' title='PopoYo WebSite'>
     <ul class='menu'>
       <li><a href='#categorias'> Categorias </a></li>
       <li><a href='#trabalhos'> Trabalhos </a></li>
       <li><a href='#footer'> Contatos </a></li>
     </ul>
     <div class='list'>
-      <article style='background-image: url("img/b_1.jpg");'></article>
-      <article style='background-image: url("img/b_2.jpg");' id='mid'></article>
-      <article style='background-image: url("img/b_3.jpg");'></article>
+      <article style='background-image: url("img/b_1.jpg");'>
+        <div class='change'>
+          <span class='mdi mdi-menu-left'></span>
+        </div>
+      </article>
+      <article style='background-image: url("img/b_2.jpg");'></article>
+      <article style='background-image: url("img/b_3.jpg");'>
+        <div class='change'>
+          <span class='mdi mdi-menu-right'></span>
+        </div>
+      </article>
     </div>
   </header>
 
@@ -120,7 +128,7 @@
           </a>
         </li>
         <li>
-          <a href='https://discord.gg/RV9HX2A' target='_blank'>
+          <a href='https://discord.gg/CEWYcvD' target='_blank'>
             <i> <span class='mdi mdi-discord' title='Discord'></span> </i>
           </a>
         </li>
@@ -150,13 +158,22 @@
             <h4>Caricatura</h4>
           </div>
           <div class='dados'>    
-            <label for='quant'>Quantidade</label>
-            <input type="number" min='1' max='5' value="1" id='nums' onkeyup="orcamento.enforce()">
+            <label for='quant'>Quantidade<br> (Max. 5)</label>
+            <input type="number" min='1' max='5' value="1" id='nums' onkeyup="orcamento.enforce()" onmouseup="orcamento.enforce()">
             <b id='total'>R$ 25,00</b>
             <button><span class='mdi mdi-cart' title='Comprar'></span>Comprar</button>
           </div>
           <hr>
-          <p>Ao ser confirmado o pagamento, enviarei um email para decidir os detalhes!<br> Fique atento ao email da sua conta no mercado pago!</p>
+          <div class="contatos">
+            <a href="https://wa.me/5512981756905" target="_blank" style="background: #25d366;">
+              <span class="mdi mdi-whatsapp"></span>
+            </a>             
+            <a href="https://discord.gg/CEWYcvD" target="_blank" style="background: #7289da;">
+              <span class="mdi mdi-discord"></span>
+            </a>
+          </div>
+          <p>Assim que efetuar o pagamento entre com contato comigo!<br>
+            O desenho será iniciado assim que o pagamento for confirmado.</p>
       </div>
     </div>
   </aside>

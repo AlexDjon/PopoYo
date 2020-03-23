@@ -16,11 +16,14 @@ const arts = document.querySelectorAll('.list article')
 arts.forEach((v, i) => {
   v.onclick = () => {
     if(i != 1) {
+      const nextId = i != 0 ? 0 : 2
+      const atual = arts[i].style.backgroundImage
       const mid = arts[1].style.backgroundImage
-      const selected = arts[i].style.backgroundImage
+      const next = arts[nextId].style.backgroundImage
       
-      arts[1].style.backgroundImage = selected
-      arts[i].style.backgroundImage = mid
+      arts[i].style.backgroundImage = next // muda o atual para o próximo
+      arts[1].style.backgroundImage = atual // muda o meio para o atual
+      arts[nextId].style.backgroundImage = mid // muda o próximo para o que tava no meio
     }
   }
 })
@@ -28,7 +31,7 @@ arts.forEach((v, i) => {
 // Orçamento
 function Orcamento() {
   this.categoria = ''
-  this.quantidadeidade = 1
+  this.quantidade = 1
   this.valor = 25
   const orcamento = document.querySelector('.orcamento')
   const nums = document.querySelector('.dados #nums')

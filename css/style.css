@@ -4,12 +4,15 @@
   --pink-dark: #f45d69;
   --red: #F13030;
   --red-dark: #5A0001;
+  --purple: #6d3758;
+  --purple-dark: #432839;
   --yellow: #FF9800;
   --white: #F7F7F7;
-  --black: #263238;
-  --grey: #212121;
+  --black: #222222;
+  --grey: #232323;
   --black-off: rgba(0,0,0,0.3);
   --black-on: rgba(14, 14, 14, 0.3);
+  --black-low: rgba(14, 14, 14, 0.534);
   --blue: #A8E7F7;
   
   --shadow: 0 0 14px 0 rgba(0, 0, 0, 0.205);
@@ -21,22 +24,30 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  background-color: var(--black-off);
-  border-bottom: solid 5px var(--grey);
+  border-radius: 0 0 9em 9em;
+  box-shadow: var(--shadow);
+  background: linear-gradient(to bottom, var(--purple), var(--black-off));
 }
 .cabecalho .logo {
   width: 110px;
   height: 110px;
-  margin: 15px 0 25px 0;
-  border-radius: 50%;
-  border: solid 3px var(--black-off);
+  margin: 0 0 35px 0;
+  border-radius: 0 0 50% 50%;
+  box-shadow: var(--shadow);  
+  /* border: solid 3px var(--black-off); */
 }
 .cabecalho .menu {
   margin-bottom: 0;
   display: inline-flex;
   align-items: center;
 }
-.cabecalho .menu li { margin: 0 7px; }
+.cabecalho .menu li { 
+  margin: 0 7px;
+  border-bottom: solid 2px var(--black-off);
+  opacity: 0.8;
+  padding: 6px 12px;
+  border-radius: 18px;
+}
 .cabecalho .menu li:first-child { margin-left: 0; }
 .cabecalho .menu li:last-child { margin-right: 0; }
 .cabecalho .menu li a {  
@@ -45,53 +56,96 @@
   padding-bottom: 3px;
   text-transform: uppercase;
 }
-.cabecalho .menu li a:hover { border-bottom: solid 2px var(--pink-dark); }
+.cabecalho .menu li:hover { opacity: 1; }
 @media (max-width: 760px) {
+  .cabecalho {
+    border-radius: 0 0 2.5em 2.5em;
+  }
   .cabecalho .logo {
     width: 90px;
     height: 90px;
+    margin-bottom: 30px;
   }
   .cabecalho .menu {
     margin-bottom: 15px;
   }
   .cabecalho .menu li a {
-    font-size: 13px;
+    font-size: 12px;
   } 
+  .cabecalho .menu li {
+    margin: 0 4px;
+  }
 }
 
 /* -- List -- */
 .list {
-  margin: 35px 0 60px 0;
+  margin: 55px 0 80px 0;
   width: 80%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 .list article {
   height: 340px;
-  width: 16%;
+  width: 14%;
   background-color: var(--pink);
-  border-radius: 8px;
+  border-radius: 15px;
   background-image: url('../img/default.png');
   background-size: cover;
   background-position: center;
   box-shadow: var(--shadow);
-  border: solid 5px var(--black-off);
-  opacity: 0.5;
+  border-bottom: solid 6px var(--black);
+  cursor: pointer;
 }
-.list article:nth-child(2) { height: 365px; width: 58%; opacity: 1; }
+.list article:hover {
+  height: 345px;
+}
+.list article:nth-child(2) { 
+  height: 380px; 
+  width: 58%; 
+  opacity: 1; 
+  margin: 0 12px; 
+  cursor: default;
+}
+.list .change {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black-low);
+  border-radius: 11px;
+}
+.list .change span {
+  font-size: 70px;
+}
 @media (max-width: 760px) {
   .list {
     width: 100%;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
   .list article {
     width: 12%;
     height: 160px;
+    border-radius: 8px;
+    border-bottom: 0;
   }
-  .list article:nth-child(2) { width: 60%; height: 180px; }
+  .list .change {
+    border-radius: 7px;
+  }
+  .list article:hover {
+    height: 160px;
+  }
+  .list article:nth-child(2) {
+    width: 60%;
+    height: 180px; 
+    margin: 0 7px;
+  }
+  .list .change span {
+    font-size: 40px;
+  }
 }
 
 /* MAIN */
@@ -139,11 +193,8 @@ main h3 {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  background: var(--black-on);
-  box-shadow: var(--shadow);
-}
-.categorias .tipo:hover {
   background: var(--black-off);
+  box-shadow: var(--shadow);
 }
 .categorias .tipo .wallpaper {
   width: 155px;
@@ -296,7 +347,7 @@ main h3 {
 .contato ul li a span { color: var(--yellow); font-size: 30px; }
 .autor {
   width: 100%;
-  background-color: var(--grey);
+  background-color: var(--purple-dark);
   text-align: center;
 }
 .autor h4 {
@@ -305,7 +356,7 @@ main h3 {
   font-size: 13.6px;
 }
 .autor h4 a {
-  color: var(--yellow)
+  color: var(--yellow);
 }
 @media (max-width: 760px) {
   .footer {
@@ -360,16 +411,16 @@ main h3 {
 }
 
 .detalhes {
-  height: 300px;
   width: 90%;
+  margin: 0 5%;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: flex-start;
 }
 .detalhes hr {
   width: 100%;
   height: 2px;
+  margin: 7px 0;
   background-color: var(--black-on);
   opacity: 0.74;
   border-radius: 50%;
@@ -402,7 +453,7 @@ main h3 {
 }
 .detalhes .dados label {
   font-size: 12.5px;
-  margin: 20px 0 6px 0;
+  margin: 20px 0 10px 0;
   opacity: 0.8;
 }
 .detalhes .dados input {
@@ -435,7 +486,25 @@ main h3 {
   font-size: 13.5px;
   color: var(--pink);
   text-align: center;
-  padding: 0 20px;
+  padding: 0 30px;
+}
+/* Contatos */
+.detalhes .contatos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 0;
+}
+.detalhes .contatos a {
+  padding: 6px 10px;
+  border-radius: 50%;
+  margin: 0 10px;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 13px;
+}
+.detalhes .contatos a span {
+  font-size: 20px;
 }
 @media (max-width: 760px) {
   .detalhes p {

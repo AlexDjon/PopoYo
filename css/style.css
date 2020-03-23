@@ -95,7 +95,6 @@
   background-size: cover;
   background-position: center;
   box-shadow: var(--shadow);
-  border-bottom: solid 6px var(--black);
   cursor: pointer;
 }
 .list article:hover {
@@ -133,7 +132,7 @@
     border-bottom: 0;
   }
   .list .change {
-    border-radius: 7px;
+    border-radius: 6px;
   }
   .list article:hover {
     height: 160px;

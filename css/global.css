@@ -1,5 +1,5 @@
 /*- RESET -*/
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Source+Code+Pro:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Source+Code+Pro:300,400,700&display=swap');
 
 * {
   margin: 0;
@@ -10,7 +10,7 @@
   text-decoration: none;
   list-style: none;
   font-family: 'Open Sans', sans-serif;
-  color: var(--white)
+  color: var(--white);
 }
 ::-webkit-scrollbar {width: 8px; background-color: var(--black);}
 ::-webkit-scrollbar-thumb {background-color: var(--red-dark);}

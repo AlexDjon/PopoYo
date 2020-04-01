@@ -12,7 +12,7 @@
   --grey: #232323;
   --black-off: rgba(0,0,0,0.3);
   --black-on: rgba(14, 14, 14, 0.3);
-  --black-low: rgba(14, 14, 14, 0.534);
+  --black-low: rgba(14, 14, 14, 0.582);
 }
 
 .bg-pink { background-color: var(--pink); }
@@ -30,8 +30,8 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  border-radius: 0 0 9em 9em;
-  background: linear-gradient(to bottom, var(--purple), var(--black-off));
+  border-radius: 0 0 3.2em 3.2em;
+  background: linear-gradient(to bottom, var(--pink-dark), var(--black-low));
 }
 .cabecalho .logo {
   width: 140px;
@@ -59,6 +59,7 @@
   padding-bottom: 3px;
   text-transform: uppercase;
   font-weight: 600;
+  transition: padding-top 0.8s;
 }
 .cabecalho .menu li:hover {
   padding-top: 10px;
@@ -200,7 +201,7 @@ main h3 {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  background: var(--black-off);
+  background: var(--black-low);
 }
 .categorias .tipo .wallpaper {
   width: 155px;
@@ -255,12 +256,11 @@ main h3 {
 .trabalhos {
   width: 60%;
   margin-top: 80px;
-  padding: 0px 20% 80px 20%;
+  padding: 0px 20% 120px 20%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--black-on);
 }
 .trabalhos .art {
   width: 210px;
@@ -293,7 +293,7 @@ footer {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  background-color: var(--black-off);
+  background-color: rgba(0,0,0,0.9);
 }
 .contato {
   width: 90%;
@@ -342,7 +342,6 @@ footer {
 
 .orcamento {
   position: fixed;
-  background: var(--black-off);
   top: 0;
   left: 0;
   width: 100%;

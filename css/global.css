@@ -23,6 +23,8 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--black);
+  background-image: url('../img/header-texture.png');
+  background-size: 21%;
 }
 
 a {

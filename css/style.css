@@ -136,7 +136,7 @@
   }
   .list article {
     width: 12%;
-    height: 160px;
+    height: 150px;
     border-radius: 6px;
     border-bottom: 0;
   }
@@ -144,11 +144,11 @@
     border-radius: 4px;
   }
   .list article:hover {
-    height: 160px;
+    height: 150px;
   }
   .list article:nth-child(2) {
-    width: 60%;
-    height: 180px; 
+    width: 65%;
+    height: 165px; 
     margin: 0 7px;
   }
   .list .change span {

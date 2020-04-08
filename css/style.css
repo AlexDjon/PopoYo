@@ -250,6 +250,11 @@ main h3 {
     margin: 15px 0 0 0;
     font-size: 14px;
   }
+  .categorias .tipo .wallpaper {
+    width: 130px;
+    height: 130px;
+    margin-bottom: 10px;
+  }
 }
 
 /* -- TRABALHOS -- */

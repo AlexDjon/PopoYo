@@ -26,6 +26,11 @@ body {
   background-image: url('../img/header-texture.png');
   background-size: 21%;
 }
+@media (max-width: 800px) {
+  body {
+    background-size: 60%;
+  }
+}
 
 a {
   color: var(--yellow);
